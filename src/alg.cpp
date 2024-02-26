@@ -28,13 +28,12 @@ uint64_t nPrime(uint64_t n) {
                 return i;
             }
         }
-
     }
     return 0;
 }
 
 uint64_t nextPrime(uint64_t value) {
-    for (uint64_t i = value+1 ;  value<i ; i++) {
+    for (uint64_t i = value+1 ;  value < i ; i++) {
         uint64_t k = 0;
         for (uint64_t j = 2; j < sqrt(i+1) ; j++) {
             if (i%j == 0) {
