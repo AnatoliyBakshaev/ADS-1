@@ -10,7 +10,7 @@ bool checkPrime(uint64_t value) {
             return false;
         }
     }
-    return false;
+    return true;
 }
 
 uint64_t nPrime(uint64_t n) {
@@ -18,16 +18,17 @@ uint64_t nPrime(uint64_t n) {
     for (uint64_t i = 2; k != n; i++) {
         uint64_t c = 0;
         for (uint64_t j = 2; j < sqrt(i+1) ; j++) {
-            if (i%j == 0) {
+            if (i % j == 0) {
                 c++;
             }
-            if (c == 0) {
-                k++;
-                if (k == n) {
-                    return i;
-                }
+        }
+        if (c == 0) {
+            k++;
+            if (k == n) {
+                return i;
             }
         }
+
     }
     return 0;
 }
